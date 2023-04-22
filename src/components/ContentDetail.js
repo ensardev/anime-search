@@ -12,36 +12,33 @@ function ContentDetail({anime}){
                 <div className="card-content">
                     <div className="media">
                         <div className="media-content">
-                            <p className="title is-4">{anime.title}</p>
+                            <p className="title is-4"><a href={anime.url} target="_blank" rel="noreferrer">{anime.title}</a></p>
                             <p className="subtitle is-6">{anime.title_japanese}</p>
                         </div>
                     </div>
 
-                    <div className="level-item has-text-centered">
-                        <div className="p-2">
-                            <p className="heading">Score</p>
-                            <p className="title">{anime.score}</p>
-                        </div>
-                        <div className="p-2">
-                            <p className="heading">Popularity</p>
-                            <p className="title">{anime.popularity}</p>
-                        </div>
-                        <div className="p-2">
-                            <p className="heading">Ranks</p>
-                            <p className="title">{anime.rank}</p>
-                        </div>
-                    </div>
-
-                    <hr/>
-
-                    <div className="content">
-                        {(anime.synopsis && anime.synopsis.substring(0, 150)) ?? 'No description available.'} | <a href={anime.url}>Read More...</a>
+                    <div className="box">
+                        <div className="level-item has-text-centered">
+                            <div className="p-2">
+                                <p className="heading">Score</p>
+                                <p className="title">{anime.score ?? "-"}</p>
+                            </div>
+                            <div className="p-2">
+                                <p className="heading">Popularity</p>
+                                <p className="title">{anime.popularity}</p>
+                            </div>
+                            <div className="p-2">
+                                <p className="heading">Ranks</p>
+                                <p className="title">{anime.rank}</p>
+                            </div>
+                        </div>    
                     </div>
 
 
-                    <div className="content">
-                        {anime.year ?? "" } {anime.season ?? ""} 
-                    </div>
+                        <div className="content">
+                            {(anime.synopsis && anime.synopsis.substring(0, 150)) ?? 'No description available.'} | <a href={anime.url}>Read More...</a>
+                        </div>
+
 
 
                     <div className="content">
