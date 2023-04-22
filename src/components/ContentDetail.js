@@ -34,20 +34,13 @@ function ContentDetail({anime}){
                         </div>    
                     </div>
 
-
-                        <div className="content">
-                            {(anime.synopsis && anime.synopsis.substring(0, 150)) ?? 'No description available.'} | <a href={anime.url}>Read More...</a>
-                        </div>
-
-
-
                     <div className="content">
-                        <ContentCategory genres={anime.genres}/>
+                        {(anime.synopsis && anime.synopsis.substring(0, 150)) ?? 'No description available.'} | <a href={anime.url}>Read More...</a>
                     </div>
 
-
-
-
+                    <div className="content-category">
+                        <ContentCategory genres={anime.genres}/>
+                    </div>
                 </div> 
             </div>
         </div>

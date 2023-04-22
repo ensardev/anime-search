@@ -1,8 +1,9 @@
 import "bulma/css/bulma.css";
-import { useState } from "react";
-import searchAnimes from "./Api";
+import { useState, useEffect } from "react";
+import {searchAnimes, getRandomAnimes} from "./Api";
 import SearchBar from "./components/SearchBar";
 import ContentList from "./components/ContentList";
+import logoImage from "./images/Logo.png";
 
 function App(){
     const [animes, setAnimes] = useState([]);
@@ -12,6 +13,15 @@ function App(){
         setAnimes(result.data);
     };
 
+    const handleRandom = async () => {
+        const result = await getRandomAnimes();
+        console.log(result.data);
+        setAnimes(result.data);
+    };
+
+    useEffect(() => {
+        handleRandom();
+      }, []);
 
     return (
         <div>
@@ -21,7 +31,7 @@ function App(){
                     <div className="container">
                         <div className="navbar-brand">
                         <a href="/" className="navbar-item">
-                            <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo"/>
+                            <img src={logoImage} alt="Logo"/>
                         </a>
                         <span className="navbar-burger" data-target="navbarMenuHeroA">
                             <span></span>
@@ -58,6 +68,15 @@ function App(){
                     <ContentList animes={animes}/>
                 </section>
             </div>
+
+            <footer className="footer">
+                <div className="content has-text-centered">
+                    <p>
+                    <strong><a href="https://github.com/ensardev/anime-search">AniSearch</a></strong> by <a href="https://ensar.dev">EnsarDEV</a>. The source code is licensed 
+                    <a href="http://opensource.org/licenses/mit-license.php"> MIT</a>.
+                    </p>
+                </div>
+            </footer>
         </div>
         )
 }
