@@ -1,4 +1,12 @@
+<div align="center">
+<h2>AniSearch <img src="./pokemon.gif" height="50"></h2>
+</div>
+
+___
+
 AniSearch is a website project where you can search for your desired anime and see some details about it. It is primarily developed to experience simple usage scenarios of any API with React.
+
+You can visit : https://anisearch-react.vercel.app/
 
 ## Tools
 
@@ -8,6 +16,7 @@ AniSearch is a website project where you can search for your desired anime and s
 ![Vercel](https://img.shields.io/badge/vercel-%23323330.svg?style=for-the-badge&logo=Vercel&logoColor=%white)
 
 ## API
+
 [Jikan API v4](https://jikan.moe/)
 
 ## Available Scripts
@@ -17,8 +26,6 @@ In the project directory, you can run for the install modules:
 ```
 npm install
 ```
-
-<br/>
 
 Now you are ready to run the project:
 
