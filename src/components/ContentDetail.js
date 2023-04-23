@@ -25,11 +25,11 @@ function ContentDetail({anime}){
                             </div>
                             <div className="p-2">
                                 <p className="heading">Popularity</p>
-                                <p className="title">{anime.popularity}</p>
+                                <p className="title">{anime.popularity ?? "-"}</p>
                             </div>
                             <div className="p-2">
                                 <p className="heading">Ranks</p>
-                                <p className="title">{anime.rank}</p>
+                                <p className="title">{anime.rank ?? "-"}</p>
                             </div>
                         </div>    
                     </div>
