@@ -4,7 +4,7 @@
 
 AniSearch is a website project where you can search for your desired anime and see some details about it. It is primarily developed to experience simple usage scenarios of any API with React.
 
-You can visit : https://anisearch-react.vercel.app/
+You can visit : https://animesearch.viapp.dev/
 
 ## Tools
 
